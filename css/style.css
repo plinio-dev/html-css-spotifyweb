@@ -8,8 +8,9 @@ body {
 }
 .banner_upgrade {
   position: fixed;
+  display: flex;
   height: 80px;
-  background-color: rgba 0,0,0, 0.5;
+  background-color: rgba(0,0,0,0.5);
   top:0;
   left: 250px;
   width: 100%;
@@ -18,7 +19,7 @@ body {
 
 main {
   display: flex;
-  height: calc( 100% - 160px);
+  height: calc( 100% - 80px);
 }
 
 aside {
@@ -30,7 +31,7 @@ aside {
   background-color: #000000;
 }
 .music {
-  margin-top: 80px;
+  padding-top: 80px;
   width: calc(100% - 250px);
   display: flex;
   justify-content: center;
@@ -38,6 +39,8 @@ aside {
   overflow: auto;
 }
 footer {
+  display: flex;
+  justify-content: space-between;
   height: 80px;
   background-color: #282828;
 }
