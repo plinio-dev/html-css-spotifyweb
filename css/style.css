@@ -17,6 +17,12 @@ span {
 svg {
   fill: #666666;
 }
+.playlist h4 {
+  text-transform: uppercase;
+  color: #ffff;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
 /* /typo */
 
 /* mix */
@@ -30,6 +36,12 @@ a {
 .list-inline {
   display: flex;
   list-style: none;
+}
+.pd-b_20 {
+  padding-bottom: 20px;
+}
+.pd-left_20 {
+  padding-left: 20px;
 }
 /* /mix */
 
@@ -55,7 +67,6 @@ main {
 /* aside */
 aside {
   display: flex;
-  flex-shrink: 0;
   flex-direction: column;
   height: 100%;
   width: 250px;
@@ -85,17 +96,50 @@ aside {
 }
 
 .navigation li {
-  padding: 0 8px;
+  /* padding: 0 8px; */
   flex-basis: 40px;
 }
 .navigation li a {
-  padding: 0 16px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
 }
 .navigation li a svg {
   height: 28px;
   padding-right: 14px;
+}
+.playlist {
+  display: flex;
+  flex-direction: column;
+}
+.playlist-crea {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+/* icona piu */
+#plus_icon {
+  background-color: #a3a3a3;
+  color: black;
+  font-size: 35px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+}
+/* icona piu */
+
+.playlist-crea span {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.songs_list {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 /* /aside */
