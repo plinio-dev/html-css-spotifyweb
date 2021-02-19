@@ -5,7 +5,35 @@
 }
 body {
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
+
+/* typo */
+span {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 700;
+}
+svg {
+  fill: #666666;
+}
+/* /typo */
+
+/* mix */
+a {
+  text-decoration: none;
+}
+
+.list-no-style {
+  list-style: none;
+}
+.list-inline {
+  display: flex;
+  list-style: none;
+}
+/* /mix */
+
+/* banner */
 .banner_upgrade {
   position: fixed;
   display: flex;
@@ -16,12 +44,15 @@ body {
   width: 100%;
   z-index: 10;
 }
+/* /banner */
 
+/* sezione main */
 main {
   display: flex;
   height: calc( 100% - 80px);
 }
 
+/* aside */
 aside {
   display: flex;
   flex-shrink: 0;
@@ -29,7 +60,47 @@ aside {
   height: 100%;
   width: 250px;
   background-color: #000000;
+  padding-top: 24px;
 }
+
+.logo {
+  display: flex;
+}
+
+.logo a {
+  padding: 0 20px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: 40px;
+  max-width: 130px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li {
+  padding: 0 8px;
+  flex-basis: 40px;
+}
+.navigation li a {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+.navigation li a svg {
+  height: 28px;
+  padding-right: 14px;
+}
+
+/* /aside */
+
+/* sezione musica */
 .music {
   padding-top: 80px;
   width: calc(100% - 250px);
@@ -38,9 +109,14 @@ aside {
   background-color: #141922;
   overflow: auto;
 }
+/* /sezione musica */
+/* /sezione main */
+
+/* navigazione player */
 footer {
   display: flex;
   justify-content: space-between;
   height: 80px;
   background-color: #282828;
 }
+/* /navigazione player */
