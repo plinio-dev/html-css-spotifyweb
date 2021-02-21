@@ -20,52 +20,65 @@
     <a href="" id="upgrade_btn" type="button">effettua l'upgrade</a>
   </div>
   <!-- /banner -->
-  <main>
-    <!-- aside-->
-    <aside>
-      <!-- intestazione aside -->
-      <div class="logo">
-        <a href="">
-          <img src="img/logo.svg" alt="logo">
-        </a>
+  <!-- aside-->
+  <aside>
+    <!-- intestazione aside -->
+    <div class="logo">
+      <a id="logo-big" href="">
+        <img src="img/logo.svg" alt="logo">
+      </a>
+      <a id="logo-small" href=""><img  src="img/logo-small.svg" alt="logo-small"></a>
+    </div>
+    <!-- /intestazione aside -->
+    <ul class="navigation list-no-style pd-b_20">
+      <li><a href=""><img src="img/home.svg"><span>Home</span></a></li>
+      <li><a href=""><img src="img/search.svg"alt="search"><span>Cerca</span></a></li>
+      <li><a href=""><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></li>
+    </ul>
+    <div class="playlist pd-left_20">
+      <h4>playlist</h4>
+      <div class="playlist-crea">
+        <button id="plus_icon" type="button">+</button>
+        <a href=""><span>Crea playlist</span></a>
       </div>
-      <!-- /intestazione aside -->
-      <ul class="navigation list-no-style pd-b_20">
-        <li><a href=""><img src="img/home.svg"><span>Home</span></a></li>
-        <li><a href=""><img src="img/search.svg"alt="search"><span>Cerca</span></a></li>
-        <li><a href=""><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></li>
+    </div>
+    <ul class="songs_list pd-left_20">
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+      <li><a href=""><span>Nome playlist</span></a></li>
+    </ul>
+    <div class="profile pd-l-r_17">
+      <ul class="list-no-style">
+        <li><a href=""><img src="img/download.svg" alt="download"><span>Installa app</span></a></li>
+        <li><a href=""><button id="profile_icon" type="button"><img src="img/profile.svg" alt="profile"></button><h3>John Doe</h3></a></li>
       </ul>
-      <div class="playlist pd-left_20">
-        <h4>playlist</h4>
-        <div class="playlist-crea">
-          <button id="plus_icon" type="button">+</button>
-          <a href=""><span>Crea playlist</span></a>
-        </div>
-      </div>
-      <ul class="songs_list pd-left_20">
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-        <li><a href=""><span>Nome playlist</span></a></li>
-      </ul>
-      <div class="profile pd-l-r_17">
-        <ul class="list-no-style">
-          <li><a href=""><img src="img/download.svg" alt="download"><span>Installa app</span></a></li>
-          <li><a href=""><button id="profile_icon" type="button"><img src="img/profile.svg" alt="profile"></button><h3>John Doe</h3></a></li>
-        </ul>
-      </div>
+    </div>
 
-    </aside>
-    <!-- /aside -->
+  </aside>
+  <!-- /aside -->
+  <section>
     <!-- sezione musica -->
     <div class="music">
-
+      <div class="music-nav">
+        <ul class="list-inline">
+          <li><a href=""><span>in evidenza</span></a></li>
+          <li><a href=""><span>podcast</span></a></li>
+          <li><a href=""><span>classifiche</span></a></li>
+          <li><a href=""><span>generi e mood</span></a></li>
+          <li><a href=""><span>nuove uscite</span></a></li>
+          <li><a href=""><span>scopri</span></a></li>
+        </ul>
+      </div>
+      <div class="recently_played"></div>
+      <div class="created"></div>
+      <div class="most-famous"></div>
     </div>
     <!-- sezione musica -->
-  </main>
+  </section>
   <!-- footer -->
   <footer>
     <div class="info">
@@ -85,19 +98,36 @@
       <div class="btn_nav">
         <button class="player_controls"><i class="fas fa-random"></i></button>
         <button class="player_controls"><i class="fas fa-step-backward"></i></button>
-        <button class="player_controls circle"><i class="fas fa-play"></i></button></a>
+        <div id="play" class="player_controls circle"><svg role="img" height="22" width="22" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg></div>
         <button class="player_controls"><i class="fas fa-step-forward"></i></button>
         <button class="player_controls"><i class="fas fa-redo"></i></button>
       </div>
       <div class="playback_wrap">
         <span>0:25</span>
         <div class="progress_bar">
+          <div class="progress_bar_hidden">
+            <div class="point"></div>
+            <div class="progress_bar_on_active"></div>
+          </div>
           <div class="progress_bar_on"></div>
         </div>
         <span>4:35</span>
       </div>
     </div>
-    <div class="player_tools"></div>
+    <div class="player_tools">
+      <!-- <div class="tools">
+        <a href=""><i class="fas fa-list-ul"></i></a>
+        <a href=""><i class="fas fa-desktop"></i></a>
+        <a href=""><i class="fas fa-volume-up"></i></a>
+        <div class="progress_bar mrgn-left_20 ">
+          <div class="progress_bar_hidden">
+            <div class="point point_volume "></div>
+            <div class="progress_bar_on_active"></div>
+          </div>
+          <div class="progress_bar_on"></div>
+        </div>
+      </div> -->
+    </div>
   </footer>
   <!-- /footer -->
 </body>
