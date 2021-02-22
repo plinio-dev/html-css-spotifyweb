@@ -31,15 +31,19 @@
     </div>
     <!-- /intestazione aside -->
     <ul class="navigation list-no-style pd-b_20">
-      <li><button><img src="img/home.svg"><span>Home</span></button></li>
-      <li><button><img src="img/search.svg"alt="search"><span>Cerca</span></a></button>
-      <li><button><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></button>
+      <li><a href="#"><img src="img/home.svg"><span>Home</span></a></li>
+      <li><a href="#"><img src="img/search.svg"alt="search"><span>Cerca</span></a></a></li>
+      <li><a href="#"><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></li>
     </ul>
-    <div class="playlist pd-left_20">
+    <div class="flex-clmn pd-left_20">
       <h4>playlist</h4>
-      <div class="playlist-crea">
-        <button id="plus_icon" type="button">+</button>
-        <a href=""><span>Crea playlist</span></a>
+      <div class="playlist-crea flex-row align-i-cntr">
+        <a class="flex-row align-i-cntr" href="">
+          <button class="plus flex-row" type="button">
+            <div id="plus_icon">+</div>
+          </button>
+          <span>Crea playlist</span>
+        </a>
       </div>
     </div>
     <ul class="songs_list pd-left_20">
@@ -94,11 +98,11 @@
     </div>
     <div class="player_nav">
       <div class="btn_nav">
-        <button class="player_controls"><i class="fas fa-random"></i></button>
-        <button class="player_controls"><i class="fas fa-step-backward"></i></button>
+        <button class="player_controls" type="button"><i class="fas fa-random"></i></button>
+        <button class="player_controls" type="button"><i class="fas fa-step-backward"></i></button>
         <div id="play" class="player_controls circle"><svg role="img" height="18" width="18" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg></div>
-        <button class="player_controls"><i class="fas fa-step-forward"></i></button>
-        <button class="player_controls"><i class="fas fa-redo"></i></button>
+        <button class="player_controls" type="button"><i class="fas fa-step-forward"></i></button>
+        <button class="player_controls" type="button"><i class="fas fa-redo"></i></button>
       </div>
       <div class="playback_wrap">
         <span>0:25</span>

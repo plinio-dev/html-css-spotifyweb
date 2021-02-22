@@ -14,10 +14,7 @@ span {
   color: #666666;
   font-weight: 700;
 }
-/* svg {
-  fill: #666666;
-} */
-.playlist h4 {
+.flex-clmn h4 {
   text-transform: uppercase;
   color: #ffff;
   font-size: 14px;
@@ -44,10 +41,14 @@ button:focus {
 }
 #play:hover {
   transform: scale(0.9);
-  /* background-color: rgba(0,0,0,0.9); */
 }
-#plus_icon:hover {
+/* #plus_icon:hover {
   background-color: #ffffff;
+} */
+.playlist-crea a:hover .plus #plus_icon, .playlist-crea a:hover span  {
+  cursor: pointer;
+  color: white;
+  opacity: 1;
 }
 #play {
   transition: transform 0.3s;
@@ -56,15 +57,33 @@ button:focus {
   transform: scale(1.1);
   background-color: rgba(0,0,0,0.9);
 }
-.navigation li a img:hover {
-  filter: none;
-}
-.navigation li button:hover img, .navigation li button:hover span, .navigation button::before  {
+
+.navigation li a:hover img, .navigation li a:hover span, .navigation a::before  {
   filter: none;
   color: white;
-  opacity: 1;
+  cursor: pointer;
+}
+.profile li:first-child a:hover img, .profile a:hover span {
+  filter: none;
+  color: white;
 }
 /* bottoni e over */
+
+
+/* mix */
+/* flex helpers */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.align-i-cntr {
+  align-items: center;
+}
+.flex-clmn {
+  display: flex;
+  flex-direction: column;
+}
+/* /flex helpers */
 
 .list-no-style {
   list-style: none;
@@ -165,7 +184,7 @@ aside {
   display: flex;
   flex-direction: column;
 }
-.navigation li button {
+.navigation li a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -177,38 +196,35 @@ aside {
   flex-basis: 40px;
 }
 
-.navigation li button img {
+.navigation li a img {
   filter: invert(0.6);
   height: 28px;
   padding-right: 14px;
 }
 
-.playlist {
-  display: flex;
-  flex-direction: column;
-}
 .playlist-crea {
-  display: flex;
-  align-items: center;
   padding-bottom: 20px;
 }
-/* icona piu */
-#plus_icon {
-  background-color: #a3a3a3;
-  color: black;
-  font-size: 35px;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  cursor: pointer;
+.playlist-crea a {
+  width: 100%;
 }
-/* icona piu */
-
 .playlist-crea span {
   padding-left: 10px;
   font-size: 16px;
   font-weight: 700;
 }
+/* icona piu */
+#plus_icon {
+  background-color: #a3a3a3;
+  /* color: black; */
+  font-size: 35px;
+  opacity: 0.8;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+}
+/* icona piu */
+
 
 .songs_list {
   display: flex;
@@ -240,7 +256,8 @@ aside {
   display: flex;
   align-items: center;
 }
-.profile ul li img {
+.profile ul li:first-child img {
+  filter: invert(0.6);
   height: 25px;
 }
 .profile ul li span {
@@ -300,13 +317,6 @@ aside {
   width: 100%;
   background-color: grey;
 }
-
-
-
-
-
-
-
 /* /sezione musica */
 /* /sezione section */
 
@@ -491,22 +501,15 @@ svg {
     align-items: center;
     min-width: 80%;
   }
-  .
-}
 
+}
 
 @media screen and (max-width: 768px) {
 }
 
 
-/* @media screen and (max-width: 600px) {
-  .icons {
-    padding-left: 20;
-  }
-} */
-
 @media screen and (max-width: 600px) {
-  .icons a {
+  .icons a, .song_info {
     padding-left: 5px;
   }
 
@@ -526,18 +529,14 @@ svg {
     display: inline-block;
     padding-bottom: 10px;
   }
-  #logo-big {
+  #logo-big, #logo-small, .navigation li a img   {
     padding: 0;
   }
   #logo-small {
-    padding: 0;
     visibility: visible;
   }
   .navigation, .profile, aside  {
     align-items: center;
-  }
-  .navigation li a img {
-    padding: 0;
   }
   .navigation span, .profile ul span, .profile h3, #logo-big, .playlist, .songs_list {
     display: none;
@@ -557,30 +556,12 @@ svg {
   .player_nav {
     width: 40%;
   }
-  .song_info {
-    padding-left: 5px;
-  }
 
   .song_info a span, .song_info a h5 {
     font-size: 10px;
   }
   .sinister img {
-    height: 30px;
+    height: 33px;
   }
-  /* .right-icons {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .player_tools a {
-    padding-right: 10px;
-    padding-left: 0;
-  } */
-  /* .player_tools {
-    display: block;
-    width: 33%;
-  }
-  .volume {
-    align-items: center;
-    width: 100%;
-  } */
+
 }
