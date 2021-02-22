@@ -31,9 +31,9 @@
     </div>
     <!-- /intestazione aside -->
     <ul class="navigation list-no-style pd-b_20">
-      <li><a href=""><img src="img/home.svg"><span>Home</span></a></li>
-      <li><a href=""><img src="img/search.svg"alt="search"><span>Cerca</span></a></li>
-      <li><a href=""><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></li>
+      <li><button><img src="img/home.svg"><span>Home</span></button></li>
+      <li><button><img src="img/search.svg"alt="search"><span>Cerca</span></a></button>
+      <li><button><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></button>
     </ul>
     <div class="playlist pd-left_20">
       <h4>playlist</h4>
@@ -60,32 +60,30 @@
 
   </aside>
   <!-- /aside -->
-  <section>
-    <!-- sezione musica -->
-    <div class="music">
-      <div class="music-nav">
-        <ul class="list-inline">
-          <li><a href=""><span>in evidenza</span></a></li>
-          <li><a href=""><span>podcast</span></a></li>
-          <li><a href=""><span>classifiche</span></a></li>
-          <li><a href=""><span>generi e mood</span></a></li>
-          <li><a href=""><span>nuove uscite</span></a></li>
-          <li><a href=""><span>scopri</span></a></li>
-        </ul>
-      </div>
-      <div class="recently_played"></div>
-      <div class="created"></div>
-      <div class="most-famous"></div>
+  <!-- sezione musica -->
+  <div class="music">
+    <div class="music-nav">
+      <ul class="list-inline">
+        <li><a href=""><span>in evidenza</span></a></li>
+        <li><a href=""><span>podcast</span></a></li>
+        <li><a href=""><span>classifiche</span></a></li>
+        <li><a href=""><span>generi e mood</span></a></li>
+        <li><a href=""><span>nuove uscite</span></a></li>
+        <li><a href=""><span>scopri</span></a></li>
+      </ul>
     </div>
-    <!-- sezione musica -->
-  </section>
+    <div class="recently_played"></div>
+    <div class="created"></div>
+    <div class="most-famous"></div>
+  </div>
+  <!-- sezione musica -->
   <!-- footer -->
   <footer>
     <div class="info">
       <div class="sinister">
         <img src="img/sinister.jpeg" alt="sinister cover">
       </div>
-      <div class="song_info pd-left_20">
+      <div class="song_info">
         <a href=""><h5>Sinister</h5></a>
         <a href=""><span>Brano Nome</span></a>
       </div>
@@ -98,7 +96,7 @@
       <div class="btn_nav">
         <button class="player_controls"><i class="fas fa-random"></i></button>
         <button class="player_controls"><i class="fas fa-step-backward"></i></button>
-        <div id="play" class="player_controls circle"><svg role="img" height="22" width="22" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg></div>
+        <div id="play" class="player_controls circle"><svg role="img" height="18" width="18" viewBox="0 0 16 16"><path d="M4.018 14L14.41 8 4.018 2z"></path></svg></div>
         <button class="player_controls"><i class="fas fa-step-forward"></i></button>
         <button class="player_controls"><i class="fas fa-redo"></i></button>
       </div>
@@ -115,18 +113,21 @@
       </div>
     </div>
     <div class="player_tools">
-      <!-- <div class="tools">
-        <a href=""><i class="fas fa-list-ul"></i></a>
-        <a href=""><i class="fas fa-desktop"></i></a>
-        <a href=""><i class="fas fa-volume-up"></i></a>
-        <div class="progress_bar mrgn-left_20 ">
-          <div class="progress_bar_hidden">
-            <div class="point point_volume "></div>
-            <div class="progress_bar_on_active"></div>
-          </div>
-          <div class="progress_bar_on"></div>
+        <div class="right-icons">
+          <a href=""><i class="fas fa-list-ul"></i></a>
+          <a href=""><i class="fas fa-desktop"></i></a>
         </div>
-      </div> -->
+        <div class="volume">
+          <a href=""><i class="fas fa-volume-up"></i></a>
+          <div class="progress_bar">
+            <div class="progress_bar_hidden">
+              <div class="point"></div>
+              <div class="progress_bar_on_active"></div>
+            </div>
+            <div class="progress_bar_on"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- /footer -->
