@@ -59,11 +59,6 @@ button:focus {
 .navigation li a img:hover {
   filter: none;
 }
-.navigation::before {
-  content: "";
-  border-left: 4px solid green;
-  opacity: 0;
-}
 .navigation li button:hover img, .navigation li button:hover span, .navigation button::before  {
   filter: none;
   color: white;
@@ -229,7 +224,7 @@ aside {
   background-color: black;
   width: 250px;
   top: calc(100% - 156px);
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   padding-bottom: 9px;
