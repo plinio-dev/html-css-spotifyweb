@@ -69,8 +69,52 @@ button:focus {
   filter: none;
   color: white;
 }
-/* bottoni e over */
 
+/* underline bar menu */
+.music-nav ul li a .underline::after {
+  visibility: hidden;
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 30%;
+  background: #008000;
+  -webkit-transition:.2s;
+  transition:.2s ease-in-out;
+}
+.music-nav ul li a span:hover:after {
+	width: 50%;
+  visibility: visible;
+}
+.music-nav ul li a .underline{
+  position: relative;
+}
+/* underline bar menu */
+
+/* left bar aside */
+.navigation li .v-line {
+  position: relative;
+}
+.navigation .v-line::after {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  border-left: 2px solid green;
+  border-radius: 2px;
+  height: 10px;
+  top: 2px;
+  -webkit-transition:.2s;
+  transition:.2s ease-in-out;
+}
+.navigation .v-line:hover::after {
+  height: 25px;
+  visibility: visible;
+}
+/* /left bar aside */
+/* bottoni e over */
 
 /* mix */
 /* flex helpers */
