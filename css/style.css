@@ -398,6 +398,7 @@ aside {
 
 .card .cover img {
   width: 100%;
+  height: 100%;
 }
 .card {
   width: 100%;
@@ -456,9 +457,10 @@ h5 {
 /* creata per te */
 
 /* popolari */
-.most-famous {
+
+/* .most-famous {
   overflow: hidden;
-}
+} */
 .circle-artista {
   border-radius: 50%;
   overflow: hidden;
