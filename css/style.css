@@ -819,7 +819,7 @@ svg {
     align-items: center;
   }
 
-  .navigation span,  .profile span, #logo-big, .playlist, .songs_list {
+  .navigation span,  .profile span, #logo-big, .playlist, .songs_list, .profile h3 {
     display: none;
   }
 
