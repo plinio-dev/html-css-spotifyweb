@@ -17,7 +17,7 @@
 <body>
   <!-- banner -->
   <div class="banner_upgrade">
-    <a href="" id="upgrade_btn" type="button">effettua l'upgrade</a>
+    <a href="" id="upgrade_btn">effettua l'upgrade</a>
   </div>
   <!-- /banner -->
   <!-- aside-->
@@ -33,12 +33,12 @@
     <ul class="navigation list-no-style pd-b_20">
       <li>
         <div class="v-line">
-          <a href="#"><img src="img/home.svg"><span>Home</span></a>
+          <a href="#"><img src="img/home.svg" alt="home" ><span>Home</span></a>
         </div>
       </li>
       <li>
         <div class="v-line">
-          <a href="#"><img src="img/search.svg"alt="search"><span>Cerca</span></a>
+          <a href="#"><img src="img/search.svg" alt="search"><span>Cerca</span></a>
         </div>
       </li>
       <li>
@@ -51,14 +51,14 @@
       <h4>playlist</h4>
       <div class="playlist-crea flex-row align-i-cntr">
         <a class="flex-row align-i-cntr" href="">
-          <button class="plus flex-row" type="button">
+          <div class="plus flex-row">
             <div id="plus_icon">+</div>
-          </button>
+          </div>
           <span>Crea playlist</span>
         </a>
       </div>
     </div>
-    <ul class="songs_list pd-left_20">
+    <ul class="songs_list list-no-style pd-left_20">
       <li><a href=""><span>Nome playlist</span></a></li>
       <li><a href=""><span>Nome playlist</span></a></li>
       <li><a href=""><span>Nome playlist</span></a></li>
@@ -69,8 +69,10 @@
     </ul>
     <div class="profile pd-l-r_17">
       <ul class="list-no-style">
-        <li><a href=""><img src="img/download.svg" alt="download"><span>Installa app</span></a></li>
-        <li><a href=""><button id="profile_icon" type="button"><img src="img/profile.svg" alt="profile"></button><h3>John Doe</h3></a></li>
+        <li><a><i class="installa fas fa-arrow-down"></i>
+          <span>Installa app</span></a>
+        </li>
+        <li><a href=""><div id="profile_icon"><img src="img/profile.svg" alt="profile"></div><h3>John Doe</h3></a></li>
       </ul>
     </div>
 
@@ -80,13 +82,13 @@
   <div class="music">
     <!-- nav -->
     <div class="music-nav">
-      <ul class="list-inline">
-        <li><a href=""><span class="underline">in evidenza</span></a></li>
-        <li><a href=""><span class="underline">podcast</span></a></li>
-        <li><a href=""><span class="underline">classifiche</span></a></li>
-        <li><a href=""><span class="underline">generi e mood</span></a></li>
-        <li><a href=""><span class="underline">nuove uscite</span></a></li>
-        <li><a href=""><span class="underline">scopri</span></a></li>
+      <ul class="list-inline flex-row">
+        <li><a href=""><h4 class="underline">in evidenza</h4></a></li>
+        <li><a href=""><h4 class="underline">podcast</h4></a></li>
+        <li><a href=""><h4 class="underline">classifiche</h4></a></li>
+        <li><a href=""><h4 class="underline">generi e mood</h4></a></li>
+        <li><a href=""><h4 class="underline">nuove uscite</h4></a></li>
+        <li><a href=""><h4 class="underline">scopri</h4></a></li>
       </ul>
     </div>
     <!-- /nav -->
@@ -319,7 +321,6 @@
           </div>
         </div>
       </div>
-    </div>
   </footer>
   <!-- /footer -->
 </body>

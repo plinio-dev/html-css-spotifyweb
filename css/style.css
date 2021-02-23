@@ -47,7 +47,7 @@ button:focus {
   transform: scale(0.9);
 }
 
-.playlist-crea a:hover .plus #plus_icon, .playlist-crea a:hover span  {
+.playlist-crea a:hover #plus_icon, .playlist-crea a:hover span  {
   cursor: pointer;
   color: white;
   opacity: 1;
@@ -68,9 +68,17 @@ button:focus {
 .profile li:first-child a:hover img, .profile a:hover span {
   filter: none;
   color: white;
+  cursor: pointer;
 }
 
+.song_info a span:hover {
+  text-decoration: underline;
+}
 /* underline bar menu */
+.underline:hover {
+  color: #ffffff;
+}
+
 .music-nav ul li a .underline::after {
   visibility: hidden;
   position: absolute;
@@ -85,7 +93,7 @@ button:focus {
   -webkit-transition:.2s;
   transition:.2s ease-in-out;
 }
-.music-nav ul li a span:hover:after {
+.music-nav ul li a .underline:hover:after {
 	width: 50%;
   visibility: visible;
 }
@@ -278,12 +286,13 @@ aside {
 /* icona piu */
 #plus_icon {
   background-color: #a3a3a3;
-  /* color: black; */
+  color: black;
   font-size: 35px;
   opacity: 0.8;
   height: 35px;
   width: 35px;
   line-height: 35px;
+  text-align: center;
 }
 /* icona piu */
 
@@ -298,6 +307,7 @@ aside {
 .songs_list li {
   padding-bottom: 20px;
 }
+
 .profile {
   background-color: black;
   width: 250px;
@@ -324,6 +334,16 @@ aside {
 }
 .profile ul li span {
   padding-left: 10px;
+}
+.installa {
+  border: 1px solid #a3a3a3;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 7px;
+  margin-left: 5px;
+}
+.fa-arrow-down {
+  color: #ffffff;
 }
 .profile h3 {
   padding-left: 10px;
@@ -352,18 +372,27 @@ aside {
 }
 
 /* music nav */
+
+
 .music-nav ul {
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 10px
 }
+.music-nav ul li {
+  margin: 0 10px;
+  padding: 5px 0;
+}
 
-.music-nav ul li span {
+.music-nav ul li h4 {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
   padding: 0 20px;
+  color: #666666;
 }
 /* /music nav */
 
@@ -483,6 +512,7 @@ footer {
   padding: 10px;
   width: 100%;
   bottom: 0;
+  z-index: 11;
 }
 
 /* sezione sinistra */
@@ -678,7 +708,7 @@ svg {
     flex-basis: calc(( 100% / 2) - 15px);
   }
   .card-wrap a h3 {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .song_info {
     padding-left: 10px;
@@ -719,14 +749,15 @@ svg {
   .navigation, .profile, aside  {
     align-items: center;
   }
-  .navigation span, .profile ul span, .profile h3, #logo-big, .playlist, .songs_list {
+  .navigation span,  .profile span, #logo-big, .playlist, .songs_list {
     display: none;
   }
   .profile ul li img {
-    height: 22px;
+    height: 25px;
+    width: 25px;
   }
   .profile ul li:first-child {
-    border-bottom: none;
+    border-bottom: 1px solid #666666;
   }
   .icons {
     padding-left: 10;
@@ -745,9 +776,15 @@ svg {
     height: 33px;
   }
   .card-wrap a h3 {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .fa-play-circle {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .profile {
+    display: none;
   }
 }
