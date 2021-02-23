@@ -35,7 +35,7 @@
       <li><a href="#"><img src="img/search.svg"alt="search"><span>Cerca</span></a></a></li>
       <li><a href="#"><img src="img/libreria.svg" alt="libreria"><span>La tua libreria</span></a></li>
     </ul>
-    <div class="flex-clmn pd-left_20">
+    <div class="playlist flex-clmn pd-left_20">
       <h4>playlist</h4>
       <div class="playlist-crea flex-row align-i-cntr">
         <a class="flex-row align-i-cntr" href="">
@@ -66,6 +66,7 @@
   <!-- /aside -->
   <!-- sezione musica -->
   <div class="music">
+    <!-- nav -->
     <div class="music-nav">
       <ul class="list-inline">
         <li><a href=""><span>in evidenza</span></a></li>
@@ -76,20 +77,120 @@
         <li><a href=""><span>scopri</span></a></li>
       </ul>
     </div>
-    <div class="recently_played"></div>
-    <div class="created"></div>
-    <div class="most-famous"></div>
+    <!-- /nav -->
+    <!-- ascolti recenti -->
+    <div class="recently_played txt_left ">
+      <h1>Recently played</h1>
+      <div class="music-list flex-row">
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href="">
+              <img src="img/metal_lifting.jpg" alt="album cover">
+            </a>
+            <a href=""><h3>Heavy metal</h3></a>
+            <a href=""><span>Titolo</span></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/stranger.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3></a>
+            <a href=""><span>Kyle Dixon & Michael Stein</span></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/aquietplace.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>A quiet place</h3></a>
+            <a href=""><span>Subtitle</span></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/split.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>Split</h3></a>
+            <a href=""><span>Subtitle</span></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/cure.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>A cure for wellness</h3></a>
+            <a href=""><span>Subtitle</span></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/sinister.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>Sinister</h3></a>
+            <a href=""><span>Subtitle</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /ascolti recenti -->
+    <!-- creata per te -->
+    <div class="created">
+      <h1>Creato per John Doe</h1>
+      <h5>Più ascolti, più accurati saranno i suggerimenti</h5>
+      <div class="music-list flex-row">
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href="">
+              <img src="img/radar.jpeg" alt="album cover">
+            </a>
+            <a href=""><h3>Release radar</h3></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img src="img/mixdaily.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>Daily mix 1</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- creata per te -->
+    <!-- popolari -->
+    <div class="most-famous">
+      <h1>Artisti più popolari</h1>
+      <h5>Più ascolti, più accurati saranno i suggerimenti</h5>
+      <div class="music-list flex-row">
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href="">
+              <img class="circle-artista" src="img/youg.jpeg" alt="album cover">
+            </a>
+            <a href=""><h3>Lana Del Rey</h3></a>
+          </div>
+        </div>
+        <div class="card-wrap flex-clmn">
+          <div class="card flex-clmn">
+            <a href=""><img class="circle-artista" src="img/einaudi.jpeg" alt="album cover">
+              </a>
+            <a href=""><h3>Einaudi</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- popolari -->
   </div>
   <!-- sezione musica -->
   <!-- footer -->
   <footer>
     <div class="info">
       <div class="sinister">
-        <img src="img/sinister.jpeg" alt="sinister cover">
+        <img src="img/daft-punk.jpeg" alt="sinister cover">
       </div>
       <div class="song_info">
-        <a href=""><h5>Sinister</h5></a>
-        <a href=""><span>Brano Nome</span></a>
+        <a class="clamp" href=""><h5>Doin' it Right (feat Panda Bear)</h5></a>
+        <a href=""><span>Daft Punk</span></a>
       </div>
       <div class="icons">
         <a href=""><i class="far fa-heart"></i></a>
