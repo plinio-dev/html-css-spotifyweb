@@ -368,15 +368,22 @@ aside {
 /* /music nav */
 
 /* recently played */
-.recently_played, .created {
+.recently_played, .created, .most-famous {
   padding: 20px 20px;
   width: 100%;
-}
-.music-list {
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  padding: 30px 0;
+  justify-content: center;
+}
+.titolo  {
+  text-align: left;
+  width: 100%;
+}
+.music-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card-wrap {
   background-color: #1c2027;
@@ -386,21 +393,53 @@ aside {
   margin-right: 15px;
   margin-bottom: 15px;
   padding: 20px;
+  text-align: center;
 }
 
-.card a img {
+.card .cover img {
   width: 100%;
 }
 .card {
-  min-width: 167px;
+  width: 100%;
   align-items: center;
   text-align: center;
+  position: relative;
 }
-.card h3 {
+.cover {
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba( 0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 0
+}
+.overlay button {
+  font-size: 50px;
+  color: #fff;
+  background: none;
+  z-index: 2;
+  position: absolute;
+  opacity: 0;
+}
+
+.overlay:hover, .overlay button  {
+  opacity: 1;
+  transition: opacity linear 0.5s;
+}
+
+.card-wrap a h3 {
   color: white;
   padding-bottom: 10px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 1em;
 }
 /* /recently played */
 
@@ -415,11 +454,9 @@ h5 {
   padding-top: 10px;
 }
 /* creata per te */
+
 /* popolari */
 .most-famous {
-  text-align: left;
-  padding: 20px 20px;
-  width: 100%;
   overflow: hidden;
 }
 .circle-artista {
@@ -428,8 +465,6 @@ h5 {
   /* width: 100%; */
   background-color: aliceblue;
 }
-
-
 /* popolari */
 
 /* /sezione musica */
@@ -599,7 +634,22 @@ svg {
 /* /footer */
 
 /* ---- responsive ---- */
+@media screen and (max-width: 1400px) {
+  .card-wrap {
+    flex-basis: calc(( 100% / 4) - 15px);
+  }
+  .card-wrap a h3 {
+    font-size: 0.8em;
+  }
+}
+
+
+
+
 @media screen and (max-width: 1100px) {
+  .card-wrap a h3 {
+    font-size: 0.7em;
+  }
   .right-icons {
     display: flex;
     justify-content: flex-end;
@@ -616,10 +666,18 @@ svg {
     align-items: center;
     min-width: 80%;
   }
-
+  .fa-play-circle {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .card-wrap {
+    flex-basis: calc(( 100% / 2) - 15px);
+  }
+  .card-wrap a h3 {
+    font-size: 0.6em;
+  }
   .song_info {
     padding-left: 10px;
   }
@@ -684,5 +742,10 @@ svg {
   .sinister img {
     height: 33px;
   }
-
+  .card-wrap a h3 {
+    font-size: 0.6em;
+  }
+  .fa-play-circle {
+    font-size: 32px;
+  }
 }
